@@ -1,9 +1,13 @@
 ---
-import { SITE } from 'astrowind:config';
+import { Image } from "astro:assets";
+import logo from "/src/assets/images/logo2.png";
+
+// import { SITE } from 'astrowind:config';
 ---
 
 <span
-  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+class="mx-auto text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white sm:mx-0"
 >
-  🚀 {SITE?.name}
+<Image src={logo} alt="Logo" class=" rounded max-h-16 md:max-h-22 h-auto w-auto" style="object-fit: contain; background-color: var(--aw-color-bg-page-dark);"></Image>
+<!--<img src="/src/assets/images/logo2.png" alt="Logo" class=" rounded max-h-24 h-auto w-auto" style="object-fit: contain; background-color: var(--aw-color-bg-page-dark);"> -->
 </span>
